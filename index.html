@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard">
+            <div class="header">
+                <h4>Current Song:</h4>
+                <h2>ABC</h2>
+            </div>
+            <div class="cd">
+                <div id="cd-thumb"></div>
+            </div>
+            <div class="control">
+                <div class="btn btn-repeat">
+                    <i class="fas fa-redo"></i>
+                </div>
+                <div class="btn btn-prev">
+                    <i class="fas fa-step-backward"></i>
+                </div>
+                <div class="btn btn-rewind">
+                    <img src="images/rewind 10secs.svg" alt="">
+                </div>
+                <div class="btn btn-toggle-play">
+                    <i class="fas fa-pause icon-pause hidden"></i>
+                    <i class="fas fa-play icon-play"></i>
+                </div>
+                <div class="btn btn-forward">
+                    <img src="images/forward 10secs.svg" alt="">
+                </div>
+                <div class="btn btn-next">
+                    <i class="fas fa-step-forward"></i>
+                </div>
+                <div class="btn btn-random">
+                    <i class="fas fa-random"></i>
+                </div>
+            </div>
+            <input type="range" id="progress" class="progress" min="0" max="100" step="0.5" value="0">
+            <div class="volume-slider">
+                <div>Volume:</div>
+                <input type="range" id="volume" min="0" max="1" step="0.01" value="0.1">
+            </div>
+        </div>
+        <div class="playlist"></div>
+        <div class="favorite-song">
+            <div class="menu-btn"><img src="images/menu.png" alt=""></div>
+            <ul list="favoriteSongs" class="favorite-list hidden">
+                <li class="hidden">${item.name}: ${item.singer}</li>
+            </ul>
+        </div>
+        <div class="settings">
+            <div class="setting-btn">
+                <img src="images/setting.png" alt="">
+            </div>
+            <div class="setting-menu hidden">
+                <div class="info">
+                    <div>
+                        <h3>Information:</h3>
+                        <div class="btn-toggle-info">
+                            <i class="fa-solid fa-plus"></i>
+                            <i class="fa-solid fa-minus hidden"></i>
+                        </div>
+                    </div>
+                    <div class="info-display hidden">
+                        <h4>Author: Nguyễn Trung Tín</h4>
+                        <h4>Email: ngtrungtin02062005@gmail.com</h4>
+                    </div>
+                </div>
+                <div class="exit">
+                    <button class="btn-exit">Sign Out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="exit-popup hidden">
+        <div class="exit-message">
+            <h3>Do you want to leave?</h3>
+            <div class="btn-group">
+                <button class="btn-yes">Yes</button>
+                <button class="btn-no">No</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

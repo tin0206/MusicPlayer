@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #ec1f55;
+    --text-color: #333;
+    --hover-color: #ebebeb;
+}
+html {
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background-color: #f5f5f5;
+    position: relative;
+}
+.hidden {
+    display: none;
+}
+.container {
+    max-width: 480px;
+    margin: 0 auto;
+}
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #ebebeb;
+    padding: 16px 16px 14px;
+}
+.dashboard .header {
+    margin: 10px 0;
+}
+.dashboard .header h4 {
+    font-size: 12px;
+    color: var(--primary-color);
+}
+.dashboard .header h2 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: var(--text-color);
+}
+.dashboard .cd {
+    display: flex;
+    margin: auto;
+    width: 200px;
+}
+.dashboard .cd #cd-thumb {
+    width: 100%;
+    border-radius: 50%;
+    background-color: #333;
+    padding-top: 100%;
+    background-size: cover;
+}
+.dashboard .control {
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+.dashboard .control .btn {
+    padding: 20px;
+    font-size: 18px;
+}
+.dashboard .control .btn-rewind img, .dashboard .control .btn-forward img {
+    width: 20px;
+    height: 20px;
+}
+.dashboard .control .btn-toggle-play {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #fff;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard .progress {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 6px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+
+.dashboard .progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 6px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+.dashboard .volume-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+.dashboard .volume-slider div {
+    margin: 0 10px;
+    font-size: 18px;
+}
+.dashboard .volume-slider #volume {
+    margin: 10px 0;
+    width: 100%;
+    -webkit-appearance: none;
+    height: 6px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+
+.dashboard .volume-slider #volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 6px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+.playlist {
+    margin-top: 20px;
+    padding: 12px;
+}
+.playlist .song {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    background-color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+.song .thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-size: cover;
+    margin: 0 8px;
+    background-image: url('images/MatKetNoi.jpg');
+}
+.song .body {
+    flex: 1;
+    padding: 0 16px;
+}
+.song .body h3 {
+    font-size: 16px;
+}
+.song .title {
+    font-size: 18px;
+    color: var(--text-color);
+}
+.song .author {
+    font-size: 12px;
+    color: #999;
+}
+.song .option {
+    padding: 16px 8px;
+    color: #999;
+    font-size: 18px;
+    position: relative;
+}
+.song {
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+.song:hover {
+    background-color: var(--hover-color);
+}
+.song.active {
+    background-color: var(--primary-color);
+}
+.song .option .option-list {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    font-size: 14px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+.option-list div {
+    margin: 5px 0;
+}
+.favorite-song {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.favorite-song div img {
+    width: 40px;
+    height: 40px;
+}
+.favorite-song ul {
+    height: 100%;
+    background-color: #fff;
+    width: 300px;
+}
+.settings {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.settings .setting-btn img {
+    width: 40px;
+    height: 40px;
+} 
+.settings .setting-menu {
+    width: 250px;
+    height: auto;
+    background-color: #ffffff;
+    font-size: 13px;
+}
+.settings .setting-menu .info div:first-child {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+.settings .setting-menu .info .info-display {
+    margin: 10px 0;
+}
+.settings .setting-menu .exit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.settings .setting-menu .exit button {
+    width: 50%;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+.settings .setting-menu .exit button:hover {
+    background-color: var(--hover-color);
+}
+.exit-popup.hidden {
+    display: none !important;
+}
+.exit-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+.exit-popup .exit-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.exit-popup .exit-message .btn-group button {
+    margin: 10px 20px 0 20px;
+    width: 50px;
+}
