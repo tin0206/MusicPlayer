@@ -122,6 +122,7 @@ function playSong(index) {
     }
     updateSongNameAndImg()
     updatePlaylistHighlight()
+    currentSong = index
     audio.src = songs[index].path
     audio.currentTime = 0
     progressBar.value = 0
@@ -249,16 +250,14 @@ playBtn.addEventListener('click', () => {
     if (audio.paused) {
         if (audio.currentTime == 0) {
             playSong(currentSong)
-            hiddenBtn(playIcon)
-            displayBtn(pauseIcon)
         }
-        else
-        {
+        else {
             audio.play()
-            displayBtn(pauseIcon)
-            hiddenBtn(playIcon)
         }
-    } else {
+        displayBtn(pauseIcon)
+        hiddenBtn(playIcon)
+    } 
+    else {
         audio.pause()
         displayBtn(playIcon)
         hiddenBtn(pauseIcon)
