@@ -1,64 +1,70 @@
 var songs = [
     { 
+        name: 'Buồn Hay Vui', 
+        singer: 'VSOUL x MCK x Obito x Ronboogz', 
+        path: 'music/BuonHayVui.mp3',
+        img: 'images/BuonHayVui.jpg',
+    },
+    { 
         name: 'Mất Kết Nối', 
         singer: 'Dương Domic', 
         path: 'music/MatKetNoi.mp3',
         img: 'images/MatKetNoi.jpg',
     },
-    { 
-        name: 'Không Ra Gì', 
-        singer: 'Trúc Nhân', 
-        path: 'music/KhongRaGi.mp3',
-        img: 'images/KhongRaGi.jpg',
-    },
-    { 
+    {
         name: 'Hẹn Gặp Em Ở Một Hành Tinh Khác', 
-        singer: 'Da Lab - JukySan', 
+        singer: 'Da Lab - JukySan',
         path: 'music/HenGapEmOMotHanhTinhKhac.mp3',
         img: 'images/HenGapEmOMotHanhTinhKhac.jpg',
     },
-    { 
-        name: 'Spinning Head', 
-        singer: 'Gvidon', 
-        path: 'music/SpinningHead.mp3',
-        img: 'images/SpinningHead.jpg',
+    {
+        name: 'Die With A Smile', 
+        singer: 'Lady Gaga - Bruno Mars', 
+        path: 'music/DieWithASmile.mp3',
+        img: 'images/DieWithASmile.jpg',
     },
-    { 
-        name: 'Tell Me Truth', 
-        singer: 'Denys Brodovskyi', 
-        path: 'music/TellMeTruth.mp3',
-        img: 'images/TellMeTruth.jpg',
+    {
+        name: 'Ghé Qua', 
+        singer: 'Dick x PC x Tofu', 
+        path: 'music/GheQua.mp3',
+        img: 'images/GheQua.jpg',
     },
-    { 
-        name: 'Night Detective', 
-        singer: 'Amaksi', 
-        path: 'music/NightDetective.mp3',
-        img: 'images/NightDetective.jpg',
+    {
+        name: 'Not Like Us', 
+        singer: 'Kendrick Lamar', 
+        path: 'music/NotLikeUs.mp3',
+        img: 'images/NotLikeUs.jpg',
     },
-    { 
+    {
         name: 'Wrong Times', 
         singer: 'Young Puppy - Dangrato', 
         path: 'music/WrongTimes.mp3',
         img: 'images/WrongTimes.jpg',
     },
-    { 
+    {
         name: 'Tràn Bộ Nhớ',
         singer: 'Dương Domic', 
         path: 'music/TranBoNho.mp3',
         img: 'images/TranBoNho.jpg',
     },
-    { 
-        name: 'Flow', 
-        singer: 'Loksii', 
-        path: 'music/Flow.mp3',
-        img: 'images/Flow.jpg',
+    {
+        name: 'Birds Of A Feather', 
+        singer: 'Billie Eilish', 
+        path: 'music/BirdsOfAFeather.mp3',
+        img: 'images/BirdsOfAFeather.jpg',
     },
-    { 
-        name: 'Movement', 
-        singer: 'SoulProdMusic', 
-        path: 'music/Movement.mp3',
-        img: 'images/Movement.jpg',
+    {
+        name: 'Bâng Khuâng', 
+        singer: 'Justatee', 
+        path: 'music/BangKhuang.mp3',
+        img: 'images/BangKhuang.jpg',
     },
+    {
+        name: 'Bầu Trời Mới',
+        singer: 'Da Lab - Minh Tốc - Lam',
+        path: 'music/BauTroiMoi.mp3',
+        img: 'images/BauTroiMoi.jpg',
+    }
 ]
  
 const audio = document.createElement('audio')
@@ -66,7 +72,7 @@ var currentSong = 0
 var numberOfSongs = songs.length
 audio.src = songs[currentSong].path
 
-const playBtn= document.querySelector('.btn-toggle-play')
+const playBtn = document.querySelector('.btn-toggle-play')
 const repeatBtn = document.querySelector('.btn-repeat')
 const prevBtn = document.querySelector('.btn-prev')
 const rewindBtn = document.querySelector('.btn-rewind')
@@ -170,7 +176,7 @@ songs.forEach((song) => {
             <i class="fas fa-ellipsis-h"></i>
             <div class="option-list hidden">
                 <div class="option-remove" index='${index++}'>Remove this song from playlist</div>
-                <div class="option-favorite">Add to favorite</div>
+                <div class="option-favorite hidden">Add to favorite</div>
             </div>
         </div>
     `
@@ -404,7 +410,6 @@ function updateFavorite() {
 menuBtn.addEventListener('click', (e) => {
     e.stopPropagation()
     const favoriteList = document.querySelector('.favorite-list')
-    console.log(favoriteList)
     if (favoriteList.classList.contains('hidden')) {
         displayBtn(favoriteList)
     }
