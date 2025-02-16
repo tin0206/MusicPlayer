@@ -247,9 +247,17 @@ btns.forEach((btn) => {
 
 playBtn.addEventListener('click', () => {
     if (audio.paused) {
-        playSong(currentSong)
-        hiddenBtn(playIcon)
-        displayBtn(pauseIcon)
+        if (audio.currentTime == 0) {
+            playSong(currentSong)
+            hiddenBtn(playIcon)
+            displayBtn(pauseIcon)
+        }
+        else
+        {
+            audio.play()
+            displayBtn(pauseIcon)
+            hiddenBtn(playIcon)
+        }
     } else {
         audio.pause()
         displayBtn(playIcon)
