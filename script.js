@@ -248,6 +248,10 @@ btns.forEach((btn) => {
 playBtn.addEventListener('click', () => {
     if (audio.paused) {
         if (audio.currentTime == 0) {
+            var inputTime = progressBar.value
+            audio.addEventListener('loadedmetadata', () => {
+                audio.currentTime = (inputTime / 100) * audio.duration
+            }, { once: true })
             playSong(currentSong)
         }
         else {
