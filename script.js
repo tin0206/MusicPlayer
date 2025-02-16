@@ -124,12 +124,11 @@ function playSong(index) {
     updatePlaylistHighlight()
     currentSong = index
     audio.src = songs[index].path
-    audio.currentTime = 0
-    progressBar.value = 0
     var inputTime = progressBar.value
     audio.addEventListener('loadedmetadata', () => {
         audio.currentTime = inputTime/100 * audio.duration
     }, { once: true })
+    
     cdThumbAnimate.currentTime = 0
     audio.play()
 }
