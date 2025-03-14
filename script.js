@@ -1,9 +1,9 @@
 var songs = [
-    { 
-        name: 'Buồn Hay Vui', 
-        singer: 'VSOUL x MCK x Obito x Ronboogz', 
-        path: 'music/BuonHayVui.mp3',
-        img: 'images/BuonHayVui.jpg',
+    {
+        name: '2AM', 
+        singer: 'JustaTee - Big Daddy', 
+        path: 'music/2am.mp3',
+        img: 'images/2am.jpg',
     },
     { 
         name: 'Mất Kết Nối', 
@@ -12,10 +12,10 @@ var songs = [
         img: 'images/MatKetNoi.jpg',
     },
     {
-        name: 'Hẹn Gặp Em Ở Một Hành Tinh Khác', 
-        singer: 'Da Lab - JukySan',
-        path: 'music/HenGapEmOMotHanhTinhKhac.mp3',
-        img: 'images/HenGapEmOMotHanhTinhKhac.jpg',
+        name: 'Crying Over You', 
+        singer: 'JustaTee - Binz',
+        path: 'music/CryingOverYou.mp3',
+        img: 'images/CryingOverYou.jpg',
     },
     {
         name: 'Die With A Smile', 
@@ -30,10 +30,10 @@ var songs = [
         img: 'images/GheQua.jpg',
     },
     {
-        name: 'Not Like Us', 
-        singer: 'Kendrick Lamar', 
-        path: 'music/NotLikeUs.mp3',
-        img: 'images/NotLikeUs.jpg',
+        name: 'Buồn Hay Vui', 
+        singer: 'VSOUL x MCK x Obito x Ronboogz', 
+        path: 'music/BuonHayVui.mp3',
+        img: 'images/BuonHayVui.jpg',
     },
     {
         name: 'Wrong Times', 
