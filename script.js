@@ -1,7 +1,7 @@
 var songs = [
     {
         name: '2AM', 
-        singer: 'JustaTee - Big Daddy', 
+        singer: 'JustaTee - BigDaddy', 
         path: 'music/2am.mp3',
         img: 'images/2am.jpg',
     },
